@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: FitBuddy-dev
-    env: java
+    name: fitbuddy-dev
+    env: docker
     plan: free
-    buildCommand: "./mvnw clean package -DskipTests"
-    startCommand: "java -jar target/*.jar"
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: PORT
         value: 8080
