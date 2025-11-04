@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: fitbuddy-dev
+    name: FitBuddy-dev
     env: java
     plan: free
     buildCommand: "./mvnw clean package -DskipTests"
