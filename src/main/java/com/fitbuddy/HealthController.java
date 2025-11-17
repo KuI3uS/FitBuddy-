@@ -7,6 +7,11 @@ import java.util.Map;
 @RestController
 public class HealthController {
 
+    @GetMapping("/")
+    public Map<String, String> home() {
+        return Map.of("message", "FitBuddy API is running");
+    }
+
     @GetMapping("/health")
     public Map<String, String> health() {
         return Map.of("status", "OK");
